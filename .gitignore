@@ -1,0 +1,14 @@
+# Ignore everything
+*
+
+# Allow .gitignore file itself
+!.gitignore
+
+# Allow .cpp files
+!*.cpp
+
+# Ignore directories
+*/ 
+
+# Ignore all files in directories
+*/*
