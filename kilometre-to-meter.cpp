@@ -9,7 +9,7 @@ int main () {
     cin>>kilometer;
 
     metre = (kilometer * 1000);
-    cout<<"value in metre:"<<(kilometer*1000)<<'\n';
+    cout<<"Value in metre:"<<(kilometer*1000)<<'\n';
 
 
 }
