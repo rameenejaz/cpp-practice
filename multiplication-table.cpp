@@ -8,7 +8,7 @@ int main()
     int number; // write the number's table
     int output;
 
-    cout << "Enter a number n: "
+    cout << "Enter a number n:" <<'\n';
     cin >> number;
 
     for (int i = 1; i <= 10; i++)
