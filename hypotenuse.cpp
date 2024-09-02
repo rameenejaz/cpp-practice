@@ -14,5 +14,5 @@ int main()
     cin >> height;
 
     hypotenuse = sqrt((base * base) + (height * height));
-    cout << "hypotenuse= " << hypotenuse<<'\n';
+    cout << "hypotenuse=" << hypotenuse<<'\n';
 }
