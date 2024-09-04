@@ -24,5 +24,6 @@ int main () {
     cout<<"Enter age:";
     cin>>age;
 
-    cout<<"There once was a person named "<< name << "who lived in  . " <<city <<""."<< "At the age of  ,  <<age,name<< "went to college at  "<<nameOfCollege << "."<<name<<"graduated and went to work as a "<<proffesion<<"."<<"Then,"<<name<<"adopted a(n) "<<typeOfAnimal<<"named"<<petName<<"."<<"They both lived happily ever after!"
+    cout<<"There once was a person named  "<< name << " who lived in  " <<city <<".";
+    cout <<"At the age of  ,  <<age,name;
 }
