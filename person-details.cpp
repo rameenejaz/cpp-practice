@@ -13,7 +13,7 @@ int main () {
     cin>>name;
     cout<<"Enter city name:";
     cin>>city;
-    cout<<"Enter nameOfCollege:";
+    cout<<"Enter name of College:";
     cin>>nameOfCollege;
     cout<<"Enter proffesion:";
     cin>>proffesion;
@@ -24,6 +24,6 @@ int main () {
     cout<<"Enter age:";
     cin>>age;
 
-    cout<<"There once was a person named  "<< name << " who lived in  " <<city <<".";
-    cout<<"At the age of  ,  <<age,name;
+    cout<<"There once was a person named  "<< name << " who lived in  " <<city <<". "<<"At the age of , "<<age <<name<<" went to college at "<<nameOfCollege<< " graduated and went to work as a  "<<proffesion<<"."<<"Then,"<<name<<" adopted a "<<typeOfAnimal<<" named "<<petName<<"."<<"They both lived happily ever after!";
+    
 }
