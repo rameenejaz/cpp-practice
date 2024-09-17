@@ -1,15 +1,21 @@
 #include <iostream>
 using namespace std;
 int main () {
-    char ch = 'a';
-    switch(ch) {
-    case 1: cout<<"First"<<'\n';
+    char ch = '1';
+    int num=1;
+    
+    cout<<'\n';
+    switch (ch) {
+        case 1: cout<<"first"<<'\n';
+            cout<<"First again"<<'\n';
         break;
-    case '2': cout<<"Character two"<<'\n';
-        break;
-    default: cout<<"It is the default case"<<'\n';
         
-    }
+        case '1': switch (num) {
+            case 1: cout<<"Value of num is "<<num<<'\n';
+            break;
+        }
+        break;
 
-    return 0;
-}
+        default: cout<<"It is the default case"<<'\n';
+    }
+    }
