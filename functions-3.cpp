@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-float add(float num1, float num)
+float add(float num1, float num2)
 {
     float sum = num1 + num2;
     return sum;
@@ -10,11 +10,13 @@ float subtract(float num1, float num2)
     float subtraction = num1 - num2;
     return subtraction;
 }
+
 float multiply(float num1, float num2)
 {
     float product = num1 * num2;
     return product;
 }
+
 float divide(float num1, float num2)
 {
     float quotient = num1 / num2;
