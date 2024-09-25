@@ -8,7 +8,7 @@ int main () {
     cin>>number;
     cout<<'\n';
 
-    while (i>=10) {
+    while (i<=10) {
         product=number*i;
     }
     cout<<number<<"*"<<i<<"="<<product;
