@@ -6,6 +6,6 @@ int main () {
     int number;
     cout<<"Enter the number to cube:";
     cin>>number;
-    cubeOfNumber=number*number*number;
+    cubeOfNumber=(number*number*number);
     cout<<"The cube of "<<number<<" is "<<cubeOfNumber;
 }
