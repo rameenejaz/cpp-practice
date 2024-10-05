@@ -6,7 +6,7 @@ using namespace std;
     int sum=0;
     int average=0;
     const int SENTINEL=10;
-    cout<<"Enter the positive integers ending with: "<< SENTINEL <<'\n';
+    cout<<"Enter the positive integers ending with3 "<< SENTINEL <<'\n';
     cin>>number;
     while (number!=SENTINEL) {
         sum+=number;
