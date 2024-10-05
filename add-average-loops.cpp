@@ -16,7 +16,7 @@ int main () {
         sum+=number;
         counter++;
     }
-    cout<<"The sum of the entered "<<limit<<" integers is: "<<sum;
+    cout<<"The sum of the entered "<<limit<<" integers is: "<<sum<<'\n';
     if (counter!=0) {
         average= number/counter;
         cout<<"The average of the entered "<<limit<<" integers is: "<<average;
