@@ -4,7 +4,7 @@ int main () {
     int number;
     cout<<"Enter a number: ";
     cin>>number;
-    while ((!cin>>number)) {
+    if((!cin>>number)) {
         cin.clear();
         cin.ignore ();
         cout<<"Input is invalid, enter the value again: ";
