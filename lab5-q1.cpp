@@ -3,8 +3,7 @@ using namespace std;
 int main () {
     int inputValue;
     int result;
-    int steps=1;
-    int const sentinel=1;
+    int steps=0;
     cout<<"Enter the initial value: ";
     cin>>inputValue;
     while (inputValue<1) {
@@ -27,6 +26,7 @@ int main () {
         if (inputValue==1){
                 break;
         }
+        
         }
         cout<<"The final value is: 1, the number of steps are: "<<steps;
 }
