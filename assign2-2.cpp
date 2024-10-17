@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
 int main () {
-    int number;
-    int divisor;
-    cout<<"Enter a number to find its divisor: ";
+    int number; //a variable used to store the user's input
+    cout<<"Enter a number to find its divisor: "; //prompt the user to input a value 
 
     //this is an input validation loop
     while (true) {
@@ -12,11 +11,11 @@ int main () {
             break;
         }
         else if (number<=0) {
-            cout<<"Input is invalid, enter a positive value again: ";
+            cout<<"Input is invalid, enter a positive value again: "; //taking input from user again
         }
     }
-    for (int i=number; i>=1; i--) {
+    for (int i=number; i>=1; i--) {  //declares a variable i, checks if i is a positive number, decrement to print in decreasing order
        if (number%i==0)
-        cout<<"Divisor = "<<i<<'\n';
+        cout<<"Divisor = "<<i<<'\n'; //prints all the possible divisors
     }
 }
