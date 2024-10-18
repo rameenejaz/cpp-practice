@@ -12,7 +12,7 @@ int main () {
         cout<<"Error, enter a positive number: ";
         cin>>inputValue;
     }
-    while (inputValue>1) {
+    while (inputValue>=1) {
         if (inputValue%2==0 ) {
             inputValue/=2;
             cout<<"Next value is: "<<inputValue<<'\n';
