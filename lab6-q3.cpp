@@ -51,7 +51,7 @@ int main () {
 //     }
 //             cout<<"Total integers entered "<<totalIntegers;
 
-// graded lab task 3a
+// graded lab task 3
 //   char pattern;
 //     int choice;
 //     do {
@@ -107,7 +107,10 @@ int main () {
 //         cout<<"End of program";
 
 //graded lab task 4
-// for (int i=1; i<=9; i++) {
+// int number;
+// cout<<"Enter a number from 1-9: ";
+// cin>>number;
+// for (int i=1; i<=number; i++) {
 //     for (int j=1; j<=i; j++) {
 //         cout<<j;
 //     }
