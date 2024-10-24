@@ -2,11 +2,11 @@
 using namespace std;
 int main () {
     int number=0;
-    int sum=0;
+    float sum=0;
     float average=0;
     int const SENTINEL=-999;
     int steps=0; //total inputs in range and out of range
-    int count=0; //for those in range
+    float count=0; //for those in range
     int largest=0;
     int smallest=0;
     bool firstNumber=true;
@@ -38,8 +38,8 @@ if (number>=50 && number<=550) {
 }
 }
 if (count>0) {
+average=sum/count;
 cout<<"Sum: "<<sum<<'\n';
-average= static_cast<float>(sum/count);
 cout<<"Average: "<<average<<'\n';
 cout<<"The out of range values are: "<<outOfRange<<'\n';
 cout<<"The largest number is: "<<largest<<'\n';
