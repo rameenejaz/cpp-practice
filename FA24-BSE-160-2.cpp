@@ -8,7 +8,7 @@ int main () {
   do {
     do {
     cout<<"Enter a positive integer (greater than 6): ";
-    cin>>number;
+    cin>>number; 
     if (number<=6) {
         cout<<"Invalid number. Enter a positive integer (greater than 6): ";
     }
