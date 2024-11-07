@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int pattern(int num) {
+void pattern(int num) {
     for (int i=0; i<num; i++) {
         for (int j=0; j<num; j++) {
             cout<<"*";
