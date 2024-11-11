@@ -2,10 +2,9 @@
 using namespace std;
 int main () {
     int number[5]= {10,20,30,40,50};
-
     for (int i=0; i<5; i++) {
-        cout<<"Element at index "<<i<<": "<<number[i]<<'\n';
+        cout<<"The value at index "<<i<<" is: "<<number[i]<<'\n';
     }
-    number[2]=100;
-    cout<<"After modification, element at index 2 is: "<<number[2]<<'\n';
+    number[4]=100;
+    cout<<"The 5th element is: "<<number[4];
 }
