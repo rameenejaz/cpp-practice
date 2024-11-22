@@ -3,47 +3,49 @@ using namespace std;
 void displayName() {
 cout << "********************************************" << endl;
 cout << "*** PROGRAMMING FUNDAMENTALS-LAB ***" << endl;
-cout << "*** LAB WEEK 8 ***" << endl;
+cout << "*** LAB WEEK 9 ***" << endl;
 cout << "*** FA24-BSE-160 ***" << endl;
 cout << "*** RAMEEN MUZAMMIL EJAZ ***" << endl;
 cout << "********************************************" << endl;
 }
-// functions for lab task 1 
-void input(int arr[], int size) {
+//functions of lab task 1
+void input (int arr[], int size) {
     int index;
-    for (index=0; index<size; index++) 
-    cin>>arr[index];
-    cout<<'\n';
+    for (index=0; index<size; index++) {
+        cin>>arr[index];
+        cout<<'\n';
+    }
 }
-void display(int arr[], int size) {
+void display (int arr[], int size) {
     int index;
     for (index=0; index<size; index++) {
         cout<<arr[index]<<" ";
     }
+    cout<<'\n';
 }
-int countPositive(int arr[], int size) {
+int countPositive (int arr[], int size) {
     int index;
-    int positiveNum=0;
+    int countPlus=0;
     for (index=0; index<size; index++) {
         if (arr[index]>0) {
-           positiveNum++;
+            countPlus++;
         }
-    }
-    return positiveNum;
+        }
+        return countPlus;
 }
 int countNegative(int arr[], int size) {
     int index;
-    int negativeNum=0;
+    int countMinus=0;
     for (index=0; index<size; index++) {
         if (arr[index]<0) {
-           negativeNum++;
+            countMinus++;
         }
-    }
-    return negativeNum;
+        }
+        return countMinus;
 }
 int oddNum(int arr[], int size) {
     int index;
-    int countOdd=0;
+    int countOdd;
     for (index=0; index<size; index++) {
         if (arr[index]%2==1) {
             countOdd++;
@@ -51,7 +53,7 @@ int oddNum(int arr[], int size) {
     }
     return countOdd;
 }
-int EvenNum(int arr[], int size) {
+int evenNum (int arr[], int size) {
     int index;
     int countEven=0;
     for (index=0; index<size; index++) {
@@ -61,38 +63,37 @@ int EvenNum(int arr[], int size) {
     }
     return countEven;
 }
-int zeroValues(int arr[], int size) {
+int zeros(int arr[], int size) {
     int index;
-    int zeros=0;
+    int countZeros=0;
     for (index=0; index<size; index++) {
         if (arr[index]==0) {
-            zeros++;
+            countZeros++;
         }
     }
-    return zeros;
+    return countZeros;
 }
-int largestValue(int arr[], int size) {
+int maxValue(int arr[], int size) {
     int index;
-    int maxNum=0;
-    for(index=0; index<size; index++) {
-        if (arr[index]>maxNum) {
-            maxNum=arr[index];
-        }
-    }
-    return maxNum;
-}
-int smallestValue(int arr[], int size) {
-    int index;
-    int minValue=0;
+    int max=0;
     for (index=0; index<size; index++) {
-        if (arr[index]<minValue) {
-            minValue=arr[index];
+        if (arr[index]>max) {
+            max=arr[index];
         }
     }
-    return minValue;
+    return max;
 }
-
-// functions for lab task 2
+int minValue(int arr[], int size) {
+    int index;
+    int min=0;
+    for (index=0; index<size; index++) {
+        if (arr[index]<min) {
+            min=arr[index];
+        }
+    }
+    return min;
+}
+//functions for lab task 2
 void inputValues(int arr2[], int size2) {
     int index;
     for (index=0; index<size2;index++) {
@@ -119,29 +120,7 @@ int checkValue(int arr2[], int size2) {
     }
     return count_findValue;
 }
-//functions for lab 3
-int const size=10;
-void inputArray(int arr1[], int size){
-    int index=0;
-    cout<<"Array 1: ";
-    for (index=0; index<size; index++) {
-        cin>>arr1[index];
-    }
-}
-void reversingArray(int arr1[], int arr2[], int size) {
-    int index;
-    int j=0;
-    for (index=0, j=(size-1); index<size; index++, j--) {
-        arr2[index]=arr1[j];
-    }
-}
-void displayReverse(int arr1[],int size) {
-    int index;
-    for (index=0; index<size; index++) {
-        cout<<arr1[index]<<" ";
-    }
-    cout<<'\n';
-}
+
 
 int main () {
     displayName();
@@ -157,10 +136,10 @@ int main () {
     cout<<"There are "<<countPositive(list,size)<<" positive elements"<<'\n';
     cout<<"There are "<<countNegative(list,size)<<" negative elements"<<'\n';
     cout<<"There are "<<oddNum(list,size)<<" odd elements"<<'\n';
-    cout<<"There are "<<EvenNum(list,size)<<" even elements"<<'\n';
-    cout<<"There are "<<zeroValues(list,size)<<" zero values"<<'\n';
-    cout<<"The largest element is: "<<largestValue(list,size)<<'\n';
-    cout<<"The smallest element is: "<<smallestValue(list,size)<<'\n';
+    cout<<"There are "<<evenNum(list,size)<<" even elements"<<'\n';
+    cout<<"There are "<<zeros(list,size)<<" zero values"<<'\n';
+    cout<<"The largest element is: "<<maxValue(list,size)<<'\n';
+    cout<<"The smallest element is: "<<minValue(list,size)<<'\n';
 
     //lab task 2
     cout<<"***Second lab task***"<<'\n';
@@ -172,14 +151,8 @@ int main () {
     cout<<'\n';
 
     //lab task 3
-    cout<<"***Third lab task***"<<'\n';
     int const size3=10;
-    cout<<"Enter "<<size3<< " elements: "<<'\n';
-    int arr1[10]={0};
-    int arr2[10]={0};
-    inputArray(arr1, size3);
-    cout<<"Array 2: ";
-    reversingArray(arr1, arr2, size3);
-    displayReverse(arr2,size3);
+    int list[10];
+    
 
 }

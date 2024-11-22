@@ -93,20 +93,15 @@ int smallestValue(int arr[], int size) {
 }
 
 // functions for lab task 2
-void inputValues(int arr2[], int size2) {
-    int index;
-    for (index=0; index<size2;index++) {
-        cin>>arr2[index];
-    }
-}
-int checkValue(int arr2[], int size2) {
+//input function
+int checkValue(int arr[], int size) {
     int index;
     int findValue=0;
     cout<<"Enter value to find: ";
     cin>>findValue;
     int count_findValue=0;
-    for (index=0; index<size2; index++) {
-        if(arr2[index]==findValue) {
+    for (index=0; index<size; index++) {
+        if(arr[index]==findValue) {
             count_findValue++;
         }
     }
@@ -120,27 +115,12 @@ int checkValue(int arr2[], int size2) {
     return count_findValue;
 }
 //functions for lab 3
-int const size=10;
-void inputArray(int arr1[], int size){
-    int index=0;
-    cout<<"Array 1: ";
-    for (index=0; index<size; index++) {
-        cin>>arr1[index];
-    }
-}
 void reversingArray(int arr1[], int arr2[], int size) {
     int index;
     int j=0;
     for (index=0, j=(size-1); index<size; index++, j--) {
         arr2[index]=arr1[j];
     }
-}
-void displayReverse(int arr1[],int size) {
-    int index;
-    for (index=0; index<size; index++) {
-        cout<<arr1[index]<<" ";
-    }
-    cout<<'\n';
 }
 
 int main () {
@@ -167,19 +147,18 @@ int main () {
     int list2[10]={0};
     int const size2=10;
     cout<<"Enter "<<size2<< " Integers: ";
-    inputValues(list2,size2);
+    input(list2,size2);
     checkValue(list2,size2);
     cout<<'\n';
 
     //lab task 3
     cout<<"***Third lab task***"<<'\n';
-    int const size3=10;
-    cout<<"Enter "<<size3<< " elements: "<<'\n';
+    cout<<"Enter "<<size2<< " elements: ";
     int arr1[10]={0};
     int arr2[10]={0};
-    inputArray(arr1, size3);
+    input(arr1, size2);
     cout<<"Array 2: ";
-    reversingArray(arr1, arr2, size3);
-    displayReverse(arr2,size3);
+    reversingArray(arr1, arr2, size2);
+    display(arr2,size2);
 
 }
