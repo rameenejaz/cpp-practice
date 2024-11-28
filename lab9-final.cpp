@@ -3,7 +3,7 @@ using namespace std;
 void displayName() {
 cout << "********************************************" << endl;
 cout << "*** PROGRAMMING FUNDAMENTALS-LAB ***" << endl;
-cout << "*** LAB WEEK 8 ***" << endl;
+cout << "*** LAB WEEK 9 ***" << endl;
 cout << "*** FA24-BSE-160 ***" << endl;
 cout << "*** RAMEEN MUZAMMIL EJAZ ***" << endl;
 cout << "********************************************" << endl;
@@ -150,7 +150,6 @@ int main () {
     input(list2,size2);
     checkValue(list2,size2);
     cout<<'\n';
-
     //lab task 3
     cout<<"***Third lab task***"<<'\n';
     cout<<"Enter "<<size2<< " elements: ";
