@@ -106,16 +106,16 @@ int main () {
 //         }while(choice==1);
 //         cout<<"End of program";
 
-//graded lab task 4
-// int number;
-// cout<<"Enter a number from 1-9: ";
-// cin>>number;
-// for (int i=1; i<=number; i++) {
-//     for (int j=1; j<=i; j++) {
-//         cout<<j;
-//     }
-//     cout<<'\n';
-// }
+// graded lab task 4
+int number;
+cout<<"Enter a number from 1-9: ";
+cin>>number;
+for (int i=1; i<=number; i++) {
+    for (int j=1; j<=i; j++) {
+        cout<<j;
+    }
+    cout<<'\n';
+}
 
 }
 
