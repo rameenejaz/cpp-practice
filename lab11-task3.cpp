@@ -1,4 +1,4 @@
-//taking n integer inputs from user and finding the sum the array
+//taking input from user and displaying the array in reversing order
 #include <iostream>
 using namespace std;
 void inputSize(int &size) {
@@ -16,18 +16,17 @@ void inputArray(int arr[],int size) {
         cin>>*(arr+index);
     }
 }
-int sumArray(int arr[], int size) {
-    int sum=0;
-    for (int index=0; index<size; index++) {
-        sum+=*(arr+index);
+void reverse(int arr[], int size) {
+    for (int index=(size-1); index>=0; index--) {
+        cout<<*(arr+index)<<" ";
     }
-    return sum;
 }
 int main () {
-    int size;
+     int size;
     inputSize(size);
     int list[size];
     cout<<"Enter "<<size<<" elements: ";
     inputArray(list,size);
-    cout<<"The sum of the elements in the array is: "<<sumArray(list,size)<<'\n';
+    cout<<"The reversed array is: ";
+    reverse(list,size);
 }
