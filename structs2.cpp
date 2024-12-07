@@ -20,4 +20,12 @@ int main () {
         cin>>students[i].grade;
         cout<<'\n';
     }
+    cout<<"Displaying student information: "<<'\n';
+    for (int i=0; i<3; i++) {
+        cout<<"Student "<<i+1<<":"<<'\n';
+        cout<<students[i].id<<'\n';
+        cout<<students[i].name<<'\n';
+        cout<<students[i].grade<<'\n';
+        cout<<'\n';
+    }
 }
