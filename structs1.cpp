@@ -1,3 +1,4 @@
+//basic structs question
 #include <iostream>
 using namespace std;
 struct Student {
