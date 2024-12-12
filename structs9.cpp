@@ -7,7 +7,7 @@ struct person {
     int age;
     double salary;
 };
-void display(person &p) {
+void display(person p) {
     cout<<"Display data (with functions)"<<'\n';
     cout<<"Name: "<<p.name<<'\n';
     cout<<"Age: "<<p.age<<'\n';
@@ -26,7 +26,10 @@ person getData(person p) {
     return p; //returning the entire structure of person which includes name,age and salary
 }
 int main () {
+    cout<<"Printing data using functions"<<'\n';
     person p,p2;
     p2=getData(p);
     display(p2);
+    cout<<"Printing without functions: "<<'\n';
+    
 }
