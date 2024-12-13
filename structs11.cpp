@@ -7,35 +7,49 @@ struct TimeStruct_t {
     string timePeriod;
 };
 int main () {
+    int updateHours=0;
+    int updateMins=0;
+    TimeStruct_t time;
     //lab task 1
-    TimeStruct_t time ={3,49,"pm"};
-    cout<<time.hours<<":"<<(time.minutes<10? "0":"") <<time.minutes<<" "<<time.timePeriod<<'\n';
+    cout<<"***LAB TASK 1***"<<'\n';
+    //cout<<time.hours<<":"<<(time.minutes<10? "0":"") <<time.minutes<<" "<<time.timePeriod<<'\n';
     cout<<"Taking input from user: "<<'\n';
-    cout<<"Enter hours between (0-23): ";
+    cout<<"Enter hours between (0-12): ";
     cin>>time.hours;
-    if (time.hours>=0 && time.hours<12) {
-        time.timePeriod="am";
-        if (time.hours==0){
-            time.hours=12;
-        }
-    }
-    else {
-        if (time.hours>12) {
-            time.hours=time.hours-12;
-            time.timePeriod="pm";
-        }
-    }
-    while (time.hours>24) {
-        cout<<"Invalid hours, enter time between (0-24) ";
+    while (time.hours>12 ||time.hours<1) {
+        cout<<"Invalid hours, enter time between (0-12) ";
         cin>>time.hours;
     }
-    cout<<'\n';
+    // cout<<'\n';
     cout<<"Enter minutes between (0-59): ";
     cin>>time.minutes;
     while (time.minutes<0 || time.minutes>59) {
         cout<<"INVALID!! Enter time between (0-59): ";
         cin>>time.minutes;
     }
+    cout<<"Enter the time period (AM/PM):";
+    cin>>time.timePeriod;
+    while (time.timePeriod!="am" && time.timePeriod!="pm" && time.timePeriod!="PM" &&time.timePeriod!="AM") {
+        cout << "Invalid input! Enter the time period (AM/PM): ";
+        cin >> time.timePeriod;
+    }
     cout<<'\n';
+    cout<<"Enter hours to update: ";
+    cin>>updateHours;
+    cout<<"Enter minutes to update: ";
+    cin>>updateMins;
+    time.hours+=updateHours;
+    if (time.hours>12) {
+        time.hours-=12;
+        time.timePeriod = (time.timePeriod == "am") ? "pm" : "am";
+    }
+    if (time.hours==12 && updateHours>0) {
+        time.timePeriod = (time.timePeriod == "am") ? "pm" : "am";
+    }
+    time.minutes+=updateMins;
+    if (time.minutes>=60) {
+        time.minutes-=60;
+        time.hours+=1;
+    }
     cout<<"The updated time is : "<<time.hours<<":"<<(time.minutes<10? "0":"")<<time.minutes<<" "<<time.timePeriod;
 }

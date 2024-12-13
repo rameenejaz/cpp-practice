@@ -6,7 +6,8 @@
         "utility": "cpp",
         "chrono": "cpp",
         "ratio": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "__locale": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
