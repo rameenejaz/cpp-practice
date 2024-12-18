@@ -52,7 +52,6 @@ int main () {
             cout<<"INVALID!! ";
         }
     } while(totalStudents<=0 || totalStudents>8);
-    // cin.ignore();
     getData(students2, totalStudents);
     printRecords(students2,totalStudents);
 }
