@@ -16,7 +16,7 @@ int main () {
             cout<<"Variables have been read."<<'\n';
         }
         sumIntegers=x+z;
-        cout<<"Integers: ("<<x<<"+"<<z<<")="<<(x+z)<<'\n';
+        cout<<"Integers: ("<<x<<"+"<<z<<")="<<(x+z)<<" . ";
         cout<<"Double: "<<y<<'\n';
     }
     inFile.close();
