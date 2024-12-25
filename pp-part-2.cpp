@@ -20,4 +20,17 @@ int main () {
         }
         inFile<<x<<'\n'<<y<<'\n'<<z<<'\n';
     }
+    inFile.close();
+    cout<<"File closed successfully!"<<'\n';
+    ifstream outFile("file1.txt");
+    if(!outFile) {
+        cout<<"File not opened !"<<'\n';
+    }
+    else {
+        cout<<"File opened successfully!"<<'\n';
+    while (outFile>>x>>y>>z) {
+        cout<<"Sum of integers "<<"("<<x<<"+"<<z<<")="<<x+z<<" Double: "<<y<<'\n';
+    }
+    }
+
 }
