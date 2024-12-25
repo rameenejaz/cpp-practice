@@ -41,29 +41,29 @@ void getData(productType products[], productType selectedProduct[],int &selected
             cin>>productNum;
             isSelected=false;
             for (int j=0; j<5; j++) {
-                if (products[j].productNumber==productNum) {
+                if (products[j].productNumber==productNum) { 
                     isSelected=true;
                     cout<<"Enter the quantity:";
                     cin>>quantity;
-                    if(quantity>products[j].quantity) {
-                        cout<<"insuffiecent stock to complete order  "<<products[j].productNumber<<'\n';
+                    if(quantity>products[j].quantity) { //if user enters greater quantity than present
+                        cout<<"insuffiecent stock to complete order "<<products[j].productNumber<<'\n';
                         quantity=products[j].quantity;
                         if(quantity>0) {
                         cout<<"Adding max quantity ("<<products[j].quantity<<") available to order"<<'\n';
                         selectedProduct[selectedCount]=products[j];
                         selectedProduct[selectedCount].quantity=quantity;
-                        products[j].quantity=0;
-                        selectedCount++;
+                        products[j].quantity=0; //max quantity added to order so quantity is now zero
+                        selectedCount++; //arr[1]
                         }
                     }
-                    else {
+                    else {  //when quantity available is more than the quanity user wants
                         products[j].quantity-=quantity;
                         selectedProduct[selectedCount]=products[j];
                         selectedProduct[selectedCount].quantity=quantity;
-                        if(selectedProduct[selectedCount].quantity==0) {
-                            cout<<"No items were purchased. The bill was zero."<<'\n';
-                        }
-                        selectedCount++;
+                        // if(selectedProduct[selectedCount].quantity==0) {
+                        //     cout<<"No items were purchased. The bill was zero."<<'\n';
+                        // }
+                        selectedCount++; 
                         cout<<"Order placed successfully for "<<products[j].productName<<'\n';
                         counter++;
                     }
@@ -77,15 +77,15 @@ void getData(productType products[], productType selectedProduct[],int &selected
     }
     }
     void outputSelectedData(productType products[],productType selected[], int &selectedCount) {
-        if (selectedCount==0) {
-            cout<<"No items were selected"<<'\n';
-            return;
-        }
+        // if (selectedCount==0) {
+        //     cout<<"No items were selected, the bill is zero!"<<'\n';
+        //     return;
+        // }
         double totalBill=0;
         char choice;
         int amount=0;
-        cout<<left<<setw(20)<<"Product No. "<<setw(30)<<"Product Name"<<setw(30)<<"Retail Price in Rs:"<<setw(20)<<"Quantity"<<setw(20)<<"Amount"<<'\n';
         do {  
+            cout<<left<<setw(20)<<"Product No. "<<setw(30)<<"Product Name"<<setw(30)<<"Retail Price in Rs:"<<setw(20)<<"Quantity"<<setw(20)<<"Amount"<<'\n';
             totalBill=0;
             for (int i=0; i<selectedCount; i++) {
             amount=(selected[i].retailPrice*selected[i].quantity);
@@ -93,6 +93,9 @@ void getData(productType products[], productType selectedProduct[],int &selected
             totalBill+=amount;
             
         }
+        // if (selectedCount==0) {
+        //     cout<<"No items were selected, the bill is zero!"<<'\n';            
+        // }
         cout<<"Total Bill= Rs "<<fixed<<setprecision(2)<<totalBill<<'\n';
         totalBill=0;
         cout<<"Enter 'Y' to continue shopping or any other key to exit:";
