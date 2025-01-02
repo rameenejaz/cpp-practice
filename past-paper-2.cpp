@@ -1,3 +1,4 @@
+//section b question
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -169,5 +170,8 @@ int main() {
 				break;
 			}
 		} while (choice != 5);
+    }
+    if(input!=1 || input!=2) {
+        return;
     }
 }

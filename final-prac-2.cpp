@@ -1,3 +1,4 @@
+//chat eelaf question, selecting book
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -20,9 +21,8 @@ void displayItems(storeItemType items[], int size) {
         cout<<left<<i+1<<"."<<setw(30)<<items[i].itemName<<"$"<<fixed<<setprecision(2)<<items[i].itemPrice<<'\n';
     }
 }
-void takeInput(storeItemType items[], bool selected[], int countOrder[] ,int size) {
+void takeInput(storeItemType items[], int countOrder[] ,int size) {
     int input;
-    char choice;
     do{
         cout<<"Enter numbers between (1-5) to choose a product (Enter -1 to finish):";
         cin>>input;
@@ -51,7 +51,7 @@ void generateReciept(storeItemType items[], int countOrder[], int size) {
             amount+=itemTotal;
         }
     }
-    cout<<left<<setw(30)<<"Subtital:" <<"$"<<fixed<<setprecision(2)<<amount<<'\n'; 
+    cout<<left<<setw(30)<<"Subtotal:" <<"$"<<fixed<<setprecision(2)<<amount<<'\n'; 
     if(amount>50) {
         discount=amount*(0.1);
     }
@@ -59,9 +59,8 @@ void generateReciept(storeItemType items[], int countOrder[], int size) {
         cout<<left<<setw(30)<<"Total Amount Due" <<"$"<<fixed<<setprecision(2)<<(amount-discount)<<'\n'; 
 }
 int main () {
-    const int size=8;
+    const int size=5;
     storeItemType items[size];
-    bool selected[size]={false};
     int countOrder[size]={0};
     loadData(items,size);
     displayItems(items,size);
