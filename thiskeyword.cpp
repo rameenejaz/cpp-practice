@@ -26,12 +26,24 @@ class Hero {
     void setName(string newName) {
         name=newName;
     }
+    Hero (int health) {
+        this ->health=health;
+    }
+    Hero (int health, string name) {
+        this ->health=health;
+        this ->name=name;
+    }
 };
 int main () {
     //statically made:
-    Hero rameen;
+    Hero rameen(10);
+    rameen.print();
     //dynamically made:
-    Hero *h=new Hero;
+    Hero *h=new Hero(11);
+    h->print();
+
+    Hero temp(10,"reema");
+    temp.print();
     
 
 }
