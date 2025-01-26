@@ -26,7 +26,6 @@ int main () {
     cout<<"health:"<<ramesh.getHealth()<<'\n';
     ramesh.setHealth(75);
     cout<<"health:"<<ramesh.getHealth()<<'\n';
-
     ramesh.name="rameen ejaz";
     // cout<<"health:"<<ramesh.health<<'\n';
     cout<<"name: "<<ramesh.name<<'\n';
