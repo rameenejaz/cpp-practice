@@ -34,10 +34,17 @@ class Hero {
         this ->health=health;
         this ->name=name;
     }
+    //copy constructor:
+    Hero (Hero const &temp) {
+        cout<<"Copy constructor called!"<<'\n';
+        this->health=temp.health;
+        this->name=temp.name;
+    }
 };
 int main () {
     Hero S(10,"donald");
     S.print();
     Hero R(S);
     R.print();
+
 }
