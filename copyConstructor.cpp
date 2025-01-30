@@ -4,45 +4,45 @@ class Hero {
     private:
     int health;
     public:
-    string name;
+    char level;
     //invoke the default constructor:
     Hero () {
         cout<<"Constructor Made!"<<'\n';
     }
     void print () {
         cout<<"health:"<<health<<'\n';
-        cout<<"name:"<<name<<'\n';
+        cout<<"level:"<<level<<'\n';
     }
     //to get the health
     int getHealth() {
         return health;
     }
-    string getName() {
-        return name;
+    char getName() {
+        return level;
     }
     //to set health
     void setHealth(int h) {
         health=h;
     }
-    void setName(string newName) {
-        name=newName;
+    void setName(char newLevel) {
+        level=newLevel;
     }
     Hero (int health) {
-        this ->health=health;
+        this->health=health;
     }
-    Hero (int health, string name) {
+    Hero (int health, char level) {
         this ->health=health;
-        this ->name=name;
+        this ->level=level;
     }
     //copy constructor:
     Hero (Hero const &temp) {
         cout<<"Copy constructor called!"<<'\n';
         this->health=temp.health;
-        this->name=temp.name;
+        this->level=temp.level;
     }
 };
 int main () {
-    Hero S(10,"donald");
+    Hero S(10,'A');
     S.print();
     Hero R(S);
     R.print();

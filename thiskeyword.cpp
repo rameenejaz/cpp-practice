@@ -4,34 +4,34 @@ class Hero {
     private:
     int health;
     public:
-    string name;
+    char level;
     //invoke the default constructor:
     Hero () {
         cout<<"Constructor Made!"<<'\n';
     }
     void print () {
-        cout<<"name:"<<name<<'\n';
+        cout<<"level:"<<level<<'\n';
     }
     //to get the health
     int getHealth() {
         return health;
     }
-    string getName() {
-        return name;
+    char getLevel() {
+        return level;
     }
     //to set health
     void setHealth(int h) {
         health=h;
     }
-    void setName(string newName) {
-        name=newName;
+    void setLevel(char level) {
+        this->level=level;
     }
     Hero (int health) {
-        this ->health=health;
+        this->health=health;
     }
-    Hero (int health, string name) {
-        this ->health=health;
-        this ->name=name;
+    Hero (int health, char level) {
+        this->health=health;
+        this->level=level;
     }
 };
 int main () {
@@ -41,9 +41,7 @@ int main () {
     //dynamically made:
     Hero *h=new Hero(11);
     h->print();
-
-    Hero temp(10,"reema");
-    temp.print();
+    
     
 
 }
