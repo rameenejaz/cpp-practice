@@ -44,11 +44,15 @@ class Hero {
         this ->level=level;
     }
     //copy constructor:
-    // Hero (Hero const &temp) {
-    //     cout<<"Copy constructor called!"<<'\n';
-    //     this->health=temp.health;
-    //     this->level=temp.level;
-    // }
+    Hero (Hero const &temp) {
+        cout<<"Copy constructor called!"<<'\n';
+        char *ch=new char[strlen(temp.name)+1];
+        strcpy(ch,temp.name);
+        this->name=ch;
+
+        this->health=temp.health;
+        this->level=temp.level;
+    }
     void setName(char name[]) {
         strcpy(this->name, name);
     }
