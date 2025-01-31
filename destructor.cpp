@@ -56,27 +56,18 @@ class Hero {
     void setName(char name[]) {
         strcpy(this->name, name);
     }
+    //making a destructor:
+    ~Hero() {
+        cout<<"destructor called"<<'\n';
+    }
 };
 int main () {
-    Hero hero1;
-    hero1.setHealth(12);
-    hero1.setLevel('A');
-    char name[7]="Babbar";
-    hero1.setName(name);
-    // hero1.print();
-    cout<<"Making a second hero using the default copy constructor:"<<'\n';
-    Hero hero2(hero1);
-    // hero2.print();
-    cout<<"Changing name of hero 1:"<<'\n';
-    hero1.name[0]='G';
-    hero1.print();
-    cout<<"printing second hero details"<<'\n';
-    hero2.print();
-
-    //using the assignment operator:
-    hero1=hero2;
-    hero1.print();
-    hero2.print();
-
+    //static
+    Hero a;
+    //dynamic
+    Hero *b=new Hero();
+    //manually called for destruction as it is dynamically allocated!
+    delete b;
+    return 0;
 
 }
