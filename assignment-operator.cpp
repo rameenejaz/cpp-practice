@@ -63,17 +63,20 @@ int main () {
     hero1.setLevel('A');
     char name[7]="Babbar";
     hero1.setName(name);
-    hero1.print();
+    // hero1.print();
     cout<<"Making a second hero using the default copy constructor:"<<'\n';
     Hero hero2(hero1);
-    hero2.print();
+    // hero2.print();
     cout<<"Changing name of hero 1:"<<'\n';
     hero1.name[0]='G';
     hero1.print();
     cout<<"printing second hero details"<<'\n';
     hero2.print();
 
-
+    //using the assignment operator:
+    hero1=hero2;
+    hero1.print();
+    hero2.print();
 
     // Hero S(10,'A');
     // S.print();
