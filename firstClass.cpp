@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 class hero {
-    // int health;
+    int health;
 };
 int main () {
     hero h1;
