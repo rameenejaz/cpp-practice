@@ -17,7 +17,7 @@ class editArray {
     }
     void InsertAtSpecific(int pos, int number) {
         int i=counter;
-        while(i>pos) {
+        while(i>pos) { //to move it to right
             NA[i]=NA[i-1];
             i--;
         }
@@ -35,7 +35,7 @@ class editArray {
             }
         }
         for (int j=pos; j<(counter-1); j++) {
-            NA[j]=NA[j+1];
+            NA[j]=NA[j+1]; //to move index to left
         }
         counter--;
         if(pos==-99) {
@@ -50,7 +50,7 @@ class editArray {
             return;
         }
         for (int i = pos; i < (counter - 1); i++) {
-            NA[i] = NA[i + 1];
+            NA[i] = NA[i + 1]; //to move it to the left
         }
         counter--;
         cout<<"Number searched and deleted at specific index"<<'\n';

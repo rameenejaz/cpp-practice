@@ -1,3 +1,4 @@
+//making a number editor
 #include <iostream>
 using namespace std;
 class editArray {
