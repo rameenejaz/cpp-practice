@@ -25,6 +25,11 @@ class polynomial {
     int getExponent () {
         return exponent;
     }
+    polynomial {
+        coeffiecent=0;
+        variable=0;
+        exponent=0;
+    }
 };
 void showMenu () {
     cout<<"Press 1 to set coeffiecent"<<'\n';
