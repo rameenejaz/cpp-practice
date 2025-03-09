@@ -25,27 +25,44 @@ class polynomial {
     int getExponent () {
         return exponent;
     }
-    polynomial {
+    polynomial () {
         coeffiecent=0;
-        variable=0;
+        variable='x';
         exponent=0;
     }
-};
+    void display () {
+        cout<<coeffiecent<<variable<<"^"<<exponent<<'\n';
+    }
+    polynomial addition( polynomial other) {
+        if (variable==other.variable && exponent==other.exponent) {
+            polynomial result;
+            result.coeffiecent(coeffiecent+other.coeffiecent);
+            result.variable(variable);
+            result.exponent(exponent);
+        }
+        if (variable!=other.variable && exponent!=other.exponent) {
+            return other;
+        }
+    }
+}; 
 void showMenu () {
-    cout<<"Press 1 to set coeffiecent"<<'\n';
-    cout<<"Press 2 to set the variable"<<'\n';
-    cout<<"Press 3 to set the exponent"<<'\n';
-    cout<<"Press 4 to view your polynomial"<<'\n';
-    cout<<"Press 5 to compute for another polynomial"<<'\n';
-    cout<<"Press 6 to add these polynomials"<<'\n';
-    cout<<"Press 0 to exit"<<'\n';
+    cout<<"------------------------------------------------"<<'\n';
+    cout<<"      Press 1 to set coeffiecent         "<<'\n';
+    cout<<"      Press 2 to set the variable        "<<'\n';
+    cout<<"      Press 3 to set the exponent        "<<'\n';
+    cout<<"      Press 4 to view your polynomial    "<<'\n';
+    cout<<"      Press 5 to compute for another polynomial"<<'\n';
+    cout<<"      Press 6 to add these polynomials   "<<'\n';
+    cout<<"      Press 0 to exit                    "<<'\n';
+    cout<<"-------------------------------------------------"<<'\n';
+
 }
 int main () {
     polynomial function;
     int inputCoeffiecent=0;
     char inputVariable;
     int inputExponent=0;
-    int option;
+    int option=-99;
     while(option!=0) {
         showMenu();
         cout<<"Choose your option (1-6 or 0 to exit):";
@@ -67,7 +84,7 @@ int main () {
             function.setExponent(inputExponent);
             break;
             case 4:
-            cout<<function.getCoeffiecent()<<pow(function.getVariable(), function.getExponent())<<'\n';
+            cout<<function.getCoeffiecent()<<function.getVariable()<<"^"<<function.getExponent()<<'\n';
             break;
             case 5:
             cout<<"Enter the coeffiecent value:";
