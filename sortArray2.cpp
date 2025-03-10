@@ -22,7 +22,6 @@ public:
         for (int i = 0; i < size1; i++) {
             cin >> array1[i];
         }
-
         cout << "Enter elements in the second array: ";
         for (int j = 0; j < size2; j++) {
             cin >> array2[j];
@@ -44,8 +43,6 @@ public:
         sortArray(array2, size2);
 
         int i = 0, j = 0, k = 0;
-
-        // Merge sorted arrays
         while (i < size1 && j < size2) {
             if (array1[i] < array2[j]) {
                 resultantArray[k++] = array1[i++];
@@ -65,21 +62,17 @@ public:
         }
         cout << endl;
     }
-    
 };
 
 // Main function
 int main() {
     int size1, size2;
-
     cout << "Enter size of first array: ";
     cin >> size1;
     cout << "Enter size of second array: ";
     cin >> size2;
-
     sortingArray obj(size1, size2);
     obj.inputArray();
     obj.merge();
-
     return 0;
 }
