@@ -175,16 +175,3 @@ int main () {
         }
     }
 }
-
-
-void deleteAll(int num) {
-    int newCounter=0, i=0;
-    while (i < count) {
-        if(NA[i] != num) {
-            NA[newCounter]=NA[i];
-            newCounter++;
-        }
-        i++;
-    }
-    count=newCounter;
-}

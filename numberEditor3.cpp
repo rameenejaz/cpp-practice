@@ -9,7 +9,7 @@ class editArray {
         if(counter<10) {
             NA[counter]=number;
             counter++;
-        }
+        }   
         else {
             cout<<"Array is full"<<'\n';
         }
@@ -103,7 +103,7 @@ int main () {
             edited.InsertAtSpecific(position,inputNum);
             break;
             case 3:
-            cout<<"Enter the number you want to insert at position "<<position<<":";
+            cout<<"Enter the number you want to delete at position "<<position<<":";
             cin>>inputNum;
             edited.searchDeleteNum(inputNum);
             break;
