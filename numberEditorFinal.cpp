@@ -3,7 +3,7 @@ using namespace std;
 
 class editString {
 private:
-    int NA[50] = {1, 2, 3, 4, 5};
+    int NA[50] = {1, 2, 3, 4, 5}; //adding some elements in the array
 public:
     int count = 5;
 
@@ -11,7 +11,7 @@ public:
         if (count < 50) {
             NA[count++] = n;
         } else {
-            cout << "Array is full" << '\n';
+            cout << "Array is full" << '\n'; 
         }
     }
 
